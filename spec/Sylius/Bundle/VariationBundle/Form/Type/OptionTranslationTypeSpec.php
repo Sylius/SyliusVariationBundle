@@ -17,10 +17,9 @@ use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * @author Paweł Jędrzejewski <pawel@sylius.org>
  * @author Gonzalo Vilaseca <gvilaseca@reiss.co.uk>
  */
-class OptionTypeSpec extends ObjectBehavior
+class OptionTranslationTypeSpec extends ObjectBehavior
 {
     function let()
     {
@@ -29,7 +28,7 @@ class OptionTypeSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Sylius\Bundle\VariationBundle\Form\Type\OptionType');
+        $this->shouldHaveType('Sylius\Bundle\VariationBundle\Form\Type\OptionTranslationType');
     }
 
     function it_is_a_form_type()
@@ -40,17 +39,7 @@ class OptionTypeSpec extends ObjectBehavior
     function it_builds_form_with_proper_fields(FormBuilder $builder)
     {
         $builder
-            ->add('name', 'text', Argument::any())
-            ->willReturn($builder)
-        ;
-
-        $builder
-            ->add('translations', 'a2lix_translationsForms', Argument::any())
-            ->willReturn($builder)
-        ;
-
-        $builder
-            ->add('values', 'collection', Argument::any())
+            ->add('presentation', 'text', Argument::any())
             ->willReturn($builder)
         ;
 
@@ -71,6 +60,6 @@ class OptionTypeSpec extends ObjectBehavior
 
     function it_has_valid_name()
     {
-        $this->getName()->shouldReturn('sylius_server_option');
+        $this->getName()->shouldReturn('sylius_option_translation');
     }
 }
