@@ -4,7 +4,7 @@
 sylius:
   form:
     variant:
-      presentation: Presentació
+      presentation: Präsentation
     option:
-      name: Nom intern
-      presentation: Presentació
+      name: Interner Name
+      presentation: Präsentation
