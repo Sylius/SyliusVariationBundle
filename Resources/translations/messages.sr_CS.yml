@@ -3,7 +3,5 @@
 
 sylius:
   form:
-    variant:
-      presentation: Presentasi
     option:
-      name: Nama
+      name: Ime

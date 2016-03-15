@@ -4,6 +4,6 @@
 sylius:
   form:
     variant:
-      presentation: Presentasi
+      presentation: 소개
     option:
-      name: Nama
+      values: 예상값
